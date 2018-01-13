@@ -45,7 +45,7 @@ class LibmillConan(ConanFile):
         cmake = CMake(self)
         cmake.definitions["BUILD_PERF"] = False # example
         cmake.definitions["BUILD_TESTING"] = False
-        cmake.configure(build_folder=self.build_subfolder)
+        cmake.configure(source_folder=self.source_subfolder,build_folder=self.build_subfolder)
         cmake.build()
         cmake.install()
 
